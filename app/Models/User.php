@@ -27,6 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function replies()
+    {
+        return $this->belongsTo(Reply::class);
+    }
 
     public function topics()
     {
