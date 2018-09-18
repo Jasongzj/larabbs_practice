@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
             $user->avatar = $faker->randomElement($avatars);
         });
 
-        // 让隐藏字段课件，并将数据集合转换为数组
+        // 让隐藏字段可见，并将数据集合转换为数组
         $user_array = $users->makeVisible(['password', 'remember_token'])->toArray();
 
         // 插入到数据库中
